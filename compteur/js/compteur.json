@@ -2,11 +2,11 @@
   {
     "id": 2,
     "name": "Arnaud",
-    "counter": 0,
+    "counter": 15
   },
   {
     "id": 1,
     "name": "Charles",
-    "counter": 0,
+    "counter": 20
   }
 ]
