@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+
+$header-height: 50px;
+$header-bgc: #aaa;
+
+
+header {
+    width: 100%;
+    height: $header-height;
+
+    background-color: $header-bgc;
+    .l-container {
+        height: $header-height;
+        display: flex;
+
+        /* No use of the lines below, because these lines need to be applied to the .menu */
+        //flex-wrap: wrap;
+        //justify-content: center;
+        //align-items: stretch;
+        //flex: 1 1 auto;
+
+        //border: 1px solid #00f
+}
+
+}
+
+.menu {
+    display: flex;
+    //flex-direction: row;/*by default already*/
+    //flex-wrap: wrap;/*no need to say anything yet*/
+    //justify-content: space-around; /*no need because only one menu. justify-content useful when several items inside.
+    //align-items: center; /*same same*/
+    //align-content: stretch; /*even worse... story next time*/
+    flex: 1 0 auto; /*this is the parameter which make the full-width of the .menu*/
+
+    border: 1px solid #00f;
+
+    .menu-item {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        //align-content: center;
+        flex: 1 0 auto;
+
+        border: 1px solid #0f0;
+    }
+}
+
+
+
+
+
+
+
+

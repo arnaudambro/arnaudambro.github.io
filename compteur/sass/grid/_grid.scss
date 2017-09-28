@@ -1,0 +1,63 @@
+* {@include box-sizing(border-box);}
+
+$full-width: 100%;
+$columns: 12!default;
+$gutter: 30px!default;
+$small: 540px;
+$medium: 720px;
+$large: 960px;
+$extra-large: 1140px;
+
+@mixin responsive-columns($suffix: '') {
+    .col-#{$suffix}-center {
+        margin: 0 auto;
+        float: none;
+    }
+    @for $i from 0 through $columns {
+        @if $i != 0 {
+            .col-#{$suffix}-#{$i}{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 2rem;
+                padding: 0 $gutter * 0.5;
+                width : $i / $columns * 100%;
+                //border: 1px solid #000;
+            }
+        }
+        .col-#{$suffix}-push-#{$i}{ left: $i / $columns * 100%;}
+        .col-#{$suffix}-pull-#{$i}{ left: $i / $columns * 100%;}
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    //margin: 0 $gutter * -0.5;
+    @include clearfix;
+}
+
+@media only screen {
+    @include responsive-columns('xs');
+}
+
+@media only screen and (min-width: $small) {
+    @include responsive-columns('s');
+}
+
+@media only screen and (min-width: $medium) {
+    @include responsive-columns('m');
+}
+
+@media only screen and (min-width: $large) {
+    @include responsive-columns('l');
+}
+
+@media only screen and (min-width: $extra-large) {
+    @include responsive-columns('xl');
+}
+
+
