@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: $header-height;
+}
+
+.navbar {
+  margin: 0;
+}
+
+.navbar-with-banners {
+  display: block;
+  margin: 0 auto;
+  height: $navbar-height;
+  width: 100%;
+  float: left;
+  background-color: $depannage-color;
+}
+
+.company-name {
+  padding: 0 0 0 100px;
+  height: $navbar-height;
+  font-family: 'Avenir', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: $navbar-height;
+  color: $h1-color;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $VARIABLES - COLORS
+\*------------------------------------*/
+
+$h1-color: white;
+$depannage-color: RGBA(43, 151, 216, 1);
+$depannage-color-transparent: RGBA(43, 151, 216, 0.8);
+
+$imprimante-color: RGBA(237, 79, 59, 1);
+$imprimante-color-transparent: RGBA(237, 79, 59, 0.8);
+
+$cloud-color: RGBA(57, 63, 65, 1);
+$cloud-color-transparent: RGBA(57, 63, 65, 0.8);
+
+$ged-color: RGBA(57, 187, 164, 1);
+$ged-color-transparent: RGBA(57, 187, 164, 0.95);
+
+
+/*------------------------------------*\
+    $VARIABLES - FONTS
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Avenir';
+  src: url(fonts/avenir.ttc)
+}
+
+
+/*------------------------------------*\
+    $VARIABLES - DIMENSIONS
+\*------------------------------------*/
+
+$header-height: 100vh;
+$navbar-height: 120px;
+
+$company-name-padding-left: 5%;
+
+$slogan-position-top: $navbar-height * 1.5;
+$slogan-position-left: $company-name-padding-left + 5%;
+//$banner-height: 100%;
+
+// $navbar-height: 20vh;
+// $banner-height: 100vh - $navbar-height;
+
