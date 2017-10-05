@@ -1,0 +1,26 @@
+.banner {
+  display: flex;
+  flex: 1 0 auto;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  color: white;
+
+  background-image: url(../img/david-siglin-87978.jpg);
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .container-fluid {
+    flex: 1 0 auto;
+    background-color: $depannage-color;
+    filter: opacity(80%);
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+
+.carousel-presentation {
+  margin: 0;
+  padding: 0;
+}
+
+// .col-lg-12 {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.img-contain {
+  margin: auto;
+
+  &.img-1 {
+    // height: 100vh;
+    background:url('../img/david-siglin-87978.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  &.img-2 {
+    background:url('../img/rawpixel-com-284730.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  &.img-3 {
+    background:url('../img/thomas-kvistholt-191153.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  &.img-4 {
+    background:url('../img/samuel-zeller-360588.jpg') center no-repeat;
+    background-size: cover;
+  }
+}
+
+
+.carousel-filter {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &.filter-1 {  background-color: $depannage-color-transparent;  }
+  &.filter-2 {  background-color: $imprimante-color-transparent;  }
+  &.filter-3 {  background-color: $cloud-color-transparent;  }
+  &.filter-4 {  background-color: $ged-color-transparent;  }
+}
+
+.carousel-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $navbar-height;
+  width: 100%;
+  &.navbar-1 {  background-color: $depannage-color; }
+  &.navbar-2 {  background-color: $imprimante-color; }
+  &.navbar-3 {  background-color: $cloud-color; }
+  &.navbar-4 {  background-color: $ged-color; }
+
+}
+
+.company-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 0 $company-name-padding-left;
+  height: $navbar-height;
+  font-family: 'Avenir', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: $navbar-height;
+  color: $h1-color;
+  text-transform: uppercase;
+}
+
+.slogan {
+  position: absolute;
+  top: $slogan-position-top;
+  left: $slogan-position-left;
+  height: $navbar-height;
+  font-family: 'Avenir', sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: $navbar-height;
+  color: $h1-color;
+  vertical-align: middle;
+}
+
+
+.competence {
+  position: absolute;
+  bottom: 75px;
+  right: 100px;
+  text-align: center;
+  font-family: 'Montserrat';
+  color: white;
+  .competence-title {
+    width: 100%;
+    padding: 20px;
+    display: inline-block;
+    font-size: 2em;
+    line-height: 1em;
+    letter-spacing: 2.3px;
+    font-weight: 400;
+
+  }
+  .competence-description {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    letter-spacing: 1.2px;
+    font-weight: 100;
+  }
+}
+

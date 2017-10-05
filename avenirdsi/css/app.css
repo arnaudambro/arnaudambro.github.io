@@ -1,0 +1,1646 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/grid/_grid.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 33, ../sass/grid/_grid.scss */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+@media only screen {
+  /* line 12, ../sass/grid/_grid.scss */
+  .col-xs-center {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-0 {
+    left: 0%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-0 {
+    left: 0%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 8.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-1 {
+    left: 8.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 16.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-2 {
+    left: 16.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 25%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-3 {
+    left: 25%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-3 {
+    left: 25%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 33.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-4 {
+    left: 33.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 41.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-5 {
+    left: 41.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-6 {
+    left: 50%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-6 {
+    left: 50%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 58.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-7 {
+    left: 58.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 66.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-8 {
+    left: 66.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 75%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-9 {
+    left: 75%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-9 {
+    left: 75%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 83.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-10 {
+    left: 83.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 91.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-11 {
+    left: 91.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xs-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xs-push-12 {
+    left: 100%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xs-pull-12 {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 540px) {
+  /* line 12, ../sass/grid/_grid.scss */
+  .col-s-center {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-0 {
+    left: 0%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-0 {
+    left: 0%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 8.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-1 {
+    left: 8.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 16.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-2 {
+    left: 16.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 25%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-3 {
+    left: 25%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-3 {
+    left: 25%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 33.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-4 {
+    left: 33.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 41.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-5 {
+    left: 41.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-6 {
+    left: 50%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-6 {
+    left: 50%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 58.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-7 {
+    left: 58.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 66.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-8 {
+    left: 66.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 75%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-9 {
+    left: 75%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-9 {
+    left: 75%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 83.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-10 {
+    left: 83.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 91.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-11 {
+    left: 91.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-s-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-s-push-12 {
+    left: 100%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-s-pull-12 {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  /* line 12, ../sass/grid/_grid.scss */
+  .col-m-center {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-0 {
+    left: 0%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-0 {
+    left: 0%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 8.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-1 {
+    left: 8.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 16.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-2 {
+    left: 16.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 25%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-3 {
+    left: 25%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-3 {
+    left: 25%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 33.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-4 {
+    left: 33.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 41.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-5 {
+    left: 41.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-6 {
+    left: 50%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-6 {
+    left: 50%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 58.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-7 {
+    left: 58.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 66.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-8 {
+    left: 66.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 75%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-9 {
+    left: 75%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-9 {
+    left: 75%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 83.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-10 {
+    left: 83.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 91.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-11 {
+    left: 91.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-m-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-m-push-12 {
+    left: 100%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-m-pull-12 {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 12, ../sass/grid/_grid.scss */
+  .col-l-center {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-0 {
+    left: 0%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-0 {
+    left: 0%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 8.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-1 {
+    left: 8.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 16.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-2 {
+    left: 16.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 25%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-3 {
+    left: 25%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-3 {
+    left: 25%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 33.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-4 {
+    left: 33.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 41.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-5 {
+    left: 41.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-6 {
+    left: 50%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-6 {
+    left: 50%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 58.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-7 {
+    left: 58.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 66.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-8 {
+    left: 66.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 75%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-9 {
+    left: 75%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-9 {
+    left: 75%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 83.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-10 {
+    left: 83.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 91.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-11 {
+    left: 91.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-l-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-l-push-12 {
+    left: 100%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-l-pull-12 {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  /* line 12, ../sass/grid/_grid.scss */
+  .col-xl-center {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-0 {
+    left: 0%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-0 {
+    left: 0%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 8.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-1 {
+    left: 8.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 16.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-2 {
+    left: 16.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 25%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-3 {
+    left: 25%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-3 {
+    left: 25%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 33.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-4 {
+    left: 33.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 41.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-5 {
+    left: 41.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-6 {
+    left: 50%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-6 {
+    left: 50%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 58.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-7 {
+    left: 58.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 66.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-8 {
+    left: 66.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 75%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-9 {
+    left: 75%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-9 {
+    left: 75%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 83.33333%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-10 {
+    left: 83.33333%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 91.66667%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-11 {
+    left: 91.66667%;
+  }
+
+  /* line 18, ../sass/grid/_grid.scss */
+  .col-xl-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  /* line 28, ../sass/grid/_grid.scss */
+  .col-xl-push-12 {
+    left: 100%;
+  }
+
+  /* line 29, ../sass/grid/_grid.scss */
+  .col-xl-pull-12 {
+    left: 100%;
+  }
+}
+/*------------------------------------*\
+    $VARIABLES - COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+    $VARIABLES - FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'Avenir';
+  src: url(fonts/avenir.ttc);
+}
+/*------------------------------------*\
+    $VARIABLES - DIMENSIONS
+\*------------------------------------*/
+/* line 3, ../sass/modules/_base.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+/* line 5, ../sass/modules/_header.scss */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* line 11, ../sass/modules/_header.scss */
+.navbar {
+  margin: 0;
+}
+
+/* line 15, ../sass/modules/_header.scss */
+.navbar-with-banners {
+  display: block;
+  margin: 0 auto;
+  height: 120px;
+  width: 100%;
+  float: left;
+  background-color: RGBA(43, 151, 216, 1);
+}
+
+/* line 24, ../sass/modules/_header.scss */
+.company-name {
+  padding: 0 0 0 100px;
+  height: 120px;
+  font-family: 'Avenir', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 120px;
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* line 1, ../sass/modules/_banner.scss */
+.banner {
+  display: flex;
+  flex: 1 0 auto;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  color: white;
+  background-image: url(../img/david-siglin-87978.jpg);
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 13, ../sass/modules/_banner.scss */
+.banner .container-fluid {
+  flex: 1 0 auto;
+  background-color: RGBA(43, 151, 216, 1);
+  filter: opacity(80%);
+}
+
+/* line 2, ../sass/modules/_carousel.scss */
+.carousel-presentation {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../sass/modules/_carousel.scss */
+.img-contain {
+  margin: auto;
+}
+/* line 15, ../sass/modules/_carousel.scss */
+.img-contain.img-1 {
+  background: url("../img/david-siglin-87978.jpg") center no-repeat;
+  background-size: cover;
+}
+/* line 21, ../sass/modules/_carousel.scss */
+.img-contain.img-2 {
+  background: url("../img/rawpixel-com-284730.jpg") center no-repeat;
+  background-size: cover;
+}
+/* line 26, ../sass/modules/_carousel.scss */
+.img-contain.img-3 {
+  background: url("../img/thomas-kvistholt-191153.jpg") center no-repeat;
+  background-size: cover;
+}
+/* line 31, ../sass/modules/_carousel.scss */
+.img-contain.img-4 {
+  background: url("../img/samuel-zeller-360588.jpg") center no-repeat;
+  background-size: cover;
+}
+
+/* line 38, ../sass/modules/_carousel.scss */
+.carousel-filter {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+/* line 42, ../sass/modules/_carousel.scss */
+.carousel-filter.filter-1 {
+  background-color: RGBA(43, 151, 216, 0.8);
+}
+/* line 43, ../sass/modules/_carousel.scss */
+.carousel-filter.filter-2 {
+  background-color: RGBA(237, 79, 59, 0.8);
+}
+/* line 44, ../sass/modules/_carousel.scss */
+.carousel-filter.filter-3 {
+  background-color: RGBA(57, 63, 65, 0.8);
+}
+/* line 45, ../sass/modules/_carousel.scss */
+.carousel-filter.filter-4 {
+  background-color: RGBA(57, 187, 164, 0.95);
+}
+
+/* line 48, ../sass/modules/_carousel.scss */
+.carousel-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+}
+/* line 54, ../sass/modules/_carousel.scss */
+.carousel-navbar.navbar-1 {
+  background-color: RGBA(43, 151, 216, 1);
+}
+/* line 55, ../sass/modules/_carousel.scss */
+.carousel-navbar.navbar-2 {
+  background-color: RGBA(237, 79, 59, 1);
+}
+/* line 56, ../sass/modules/_carousel.scss */
+.carousel-navbar.navbar-3 {
+  background-color: RGBA(57, 63, 65, 1);
+}
+/* line 57, ../sass/modules/_carousel.scss */
+.carousel-navbar.navbar-4 {
+  background-color: RGBA(57, 187, 164, 1);
+}
+
+/* line 61, ../sass/modules/_carousel.scss */
+.company-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 0 5%;
+  height: 120px;
+  font-family: 'Avenir', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 120px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* line 75, ../sass/modules/_carousel.scss */
+.slogan {
+  position: absolute;
+  top: 180px;
+  left: 10%;
+  height: 120px;
+  font-family: 'Avenir', sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 120px;
+  color: white;
+  vertical-align: middle;
+}
+
+/* line 89, ../sass/modules/_carousel.scss */
+.competence {
+  position: absolute;
+  bottom: 75px;
+  right: 100px;
+  text-align: center;
+  font-family: 'Montserrat';
+  color: white;
+}
+/* line 96, ../sass/modules/_carousel.scss */
+.competence .competence-title {
+  width: 100%;
+  padding: 20px;
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1em;
+  letter-spacing: 2.3px;
+  font-weight: 400;
+}
+/* line 106, ../sass/modules/_carousel.scss */
+.competence .competence-description {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  letter-spacing: 1.2px;
+  font-weight: 100;
+}

@@ -1,0 +1,11 @@
+gradient OPA :
+
+background: #3D7EAA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFE47A, #3D7EAA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+Photo by jesse orrico on Unsplash: jesse-orrico-62699
+Photo by David Siglin on Unsplash: david-siglin-87978.jpg
+Photo by frank mckenna on Unsplash: frank-mckenna-132740.jpg
+Photo by rawpixel.com on Unsplash: rawpixel-com-284730
+Photo by Thomas Kvistholt on Unsplash: thomas-kvistholt-191153.jpg
