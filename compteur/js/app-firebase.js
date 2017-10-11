@@ -25,7 +25,11 @@
     console.log("On s'occupe du compteur de: "+userName);
     let compteurValue = this.querySelector('.counter').innerHTML;
     console.log("Avant de cliquer, le compteur est à: "+parseInt(compteurValue));
-    compteurValue++;
+    if (e.shiftKey) {
+      compteurValue--;
+    } else {
+      compteurValue++;
+    }
     this.querySelector('.counter').innerHTML = compteurValue;
     console.log(compteurValue);
 
@@ -43,16 +47,12 @@
 
 
   function changeCursor(e) {
-    this.style.cursor = `url(../img/counterplus-no-transparent.png) 5 5, auto`;
-  }
 
-//Fonction Décrémentation
-  function decrementCounter(e) {
-    compteurValue = parseInt(this.innerHTML);
-    compteurValue--;
-    this.innerHTML = compteurValue;
-
-    //...
+    if(e.shiftKey) {
+      this.style.cursor = `url(img/counterminus-no-transparent.png) 5 5, auto`;
+    } else {
+      this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
+    }
 
   }
 
@@ -84,7 +84,6 @@
     competitor.addEventListener('mouseover', changeCursor)
     //Incrémentation
     competitor.addEventListener('click', incrementCounter);
-    competitor.addEventListener('click', decrementCounter);
 
 /*    getRealTimeUpdates = function() {
       compteurDatabase.onSnapshot(function (doc) {
@@ -95,9 +94,6 @@
         }
       });
     };*/
-
-
-
 
   });
 
