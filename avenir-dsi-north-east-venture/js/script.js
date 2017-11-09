@@ -28,7 +28,7 @@ const competences = [
 {
   menuPosition: 0,
   menuContent: `Avenir DSI`,
-  logoURL: `/img/Logo+nom-purple.svg`,
+  logoURL: `img/Logo+nom-purple.svg`,
   bannerContent: ``,
   isAlone: true,
   backgroundProperty: `linear-gradient(to bottom, #F8F4A6, #F0EC57)`,
@@ -40,7 +40,7 @@ const competences = [
 {
   menuPosition: 1,
   menuContent: `Urgence & Dépannage`,
-  logoURL: `/img/Logo+nom-purple.svg`,
+  logoURL: `img/Logo+nom-purple.svg`,
   bannerContent: `Urgence & Depannage`,
   isAlone: true,
   backgroundProperty: `url(/img/depannage_banner_blue.png) center / cover no-repeat`,
@@ -52,7 +52,7 @@ const competences = [
 {
   menuPosition: 2,
   menuContent: `Achat & Location`,
-  logoURL: `/img/Logo+nom-black.svg`,
+  logoURL: `img/Logo+nom-black.svg`,
   bannerContent: `Achat & Location`,
   isAlone: true,
   backgroundProperty: `url(/img/impression_banner-red.png) center / cover no-repeat`,
@@ -64,7 +64,7 @@ const competences = [
 {
   menuPosition: 3,
   menuContent: `Infogérance`,
-  logoURL: `/img/Logo+nom-white.svg`,
+  logoURL: `img/Logo+nom-white.svg`,
   bannerContent: `Infogerance`,
   isAlone: true,
   backgroundProperty: `url(/img/cloud_banner-black.png) center / cover no-repeat`,
@@ -76,7 +76,7 @@ const competences = [
 {
   menuPosition: 4,
   menuContent: `GED`,
-  logoURL: `/img/Logo+nom-black.svg`,
+  logoURL: `img/Logo+nom-black.svg`,
   bannerContent: `GED`,
   isAlone: true,
   backgroundProperty: `url(/img/ged_banner-green.png) center / cover no-repeat`,
