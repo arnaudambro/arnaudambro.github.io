@@ -1,0 +1,40 @@
+.menu {
+
+  margin-top: $menu-margin-top-bottom-xs;
+  margin-bottom: $menu-margin-top-bottom-xs;
+  padding-left: $menu-padding-left-right-xs;
+  padding-right: $menu-padding-left-right-xs;
+
+  @media only screen and (min-width: $md-width) {
+    margin-top: $menu-margin-top-bottom-md;
+    margin-bottom: $menu-margin-top-bottom-md;
+    padding-left: $menu-padding-left-right-md;
+    padding-right: $menu-padding-left-right-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    margin-top: $menu-margin-top-bottom-lg;
+    margin-bottom: $menu-margin-top-bottom-lg;
+    padding-left: $menu-padding-left-right-lg;
+    padding-right: $menu-padding-left-right-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    margin-top: $menu-margin-top-bottom-xl;
+    margin-bottom: $menu-margin-top-bottom-xl;
+    padding-left: $menu-padding-left-right-xl;
+    padding-right: $menu-padding-left-right-xl;
+  }
+}
+
+.ul-horizontal {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: $menu-font-size-xs;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  list-style: none;
+}

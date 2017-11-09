@@ -1,0 +1,94 @@
+.main-content {
+  padding-left: $menu-padding-left-right-xs;
+  padding-right: $menu-padding-left-right-xs;
+  @media only screen and (min-width: $md-width) {
+    padding-left: $menu-padding-left-right-md;
+    padding-right: $menu-padding-left-right-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    padding-left: $menu-padding-left-right-lg;
+    padding-right: $menu-padding-left-right-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    padding-left: $menu-padding-left-right-xl;
+    padding-right: $menu-padding-left-right-xl;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  align-items: flex-start;
+
+}
+
+.main-description-content {
+  max-width: 500px;
+}
+
+div.main-description-button {
+}
+
+a.main-description-button {
+
+  margin-top: 50px;
+  height: 45px;
+  width: 150px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  //align-content: center;
+
+  // color: $white;
+  font-size: $menu-font-size-xs;
+  line-height: $menu-font-size-xs;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+
+  // background-color: $color-avenir-dsi;
+  border: none;
+
+  > * {
+    transition: all 0.3s;
+  }
+
+  > p {
+    transform: translateX($button-arrow-size/2);
+  }
+
+  > svg.svg-arrow {
+    height: $button-arrow-size;
+    width: $button-arrow-size;
+    transform: translateX($button-arrow-size);
+    opacity: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+    > p {
+      transform: translateX(-$button-arrow-size / 3);
+    }
+    > .svg-arrow {
+      transform: translateX($button-arrow-size / 3);
+      opacity: 1;
+    }
+  }
+}
+
+
+/* :after {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  margin-right: -$button-arrow-size;
+  background-color: black;
+  height: $button-arrow-size;
+  width: $button-arrow-size;
+  transform: translateX($button-arrow-size);
+} */

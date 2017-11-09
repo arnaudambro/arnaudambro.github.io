@@ -1,0 +1,132 @@
+@import "../bootstrap/variables";
+
+/*------------------------------------*\
+    $VARIABLES - COLORS
+\*------------------------------------*/
+
+$emergency: rgba(255,56,90,1.00);
+$color-avenir-dsi: rgba(20,85,180,1.00);
+$green: rgba(68,187,163,1.00);
+$brown: rgba(57,63,65,1.00);
+$red: rgba(233,79,55,1.00);
+$blue-de-france: rgba(52,152,219,1.00);
+$white: rgba(240,240,240,1);
+$black: rgba(41,44,45,1.00);
+
+/*------------------------------------*\
+    $VARIABLES - FONTS
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    $VARIABLES - DIMENSIONS
+\*------------------------------------*/
+
+//Non-responsive
+$banner-separation-height: 40px;
+$button-arrow-size: 12px;
+
+//Screen sizes
+$xs-width: map-get($grid-breakpoints, 'xs');
+$sm-width: map-get($grid-breakpoints, 'sm');
+$md-width: map-get($grid-breakpoints, 'md');
+$lg-width: map-get($grid-breakpoints, 'lg');
+$xl-width: map-get($grid-breakpoints, 'xl');
+
+
+//Menu
+$menu-margin-top-bottom-xs: 22px;
+$menu-margin-top-bottom-sm: $menu-margin-top-bottom-xs;
+$menu-margin-top-bottom-md: $menu-margin-top-bottom-sm;
+$menu-margin-top-bottom-lg: 50px;
+$menu-margin-top-bottom-xl: $menu-margin-top-bottom-lg;
+
+$menu-padding-left-right-xs: 33px;
+$menu-padding-left-right-sm: $menu-padding-left-right-xs;
+$menu-padding-left-right-md: 50px;
+$menu-padding-left-right-lg: 80px;
+$menu-padding-left-right-xl: 125px;
+
+$menu-font-size-xs: 0.75em;
+$menu-font-size-sm: $menu-font-size-xs;
+$menu-font-size-md: $menu-font-size-sm;
+$menu-font-size-lg: $menu-font-size-md;
+$menu-font-size-xl: $menu-font-size-lg;
+
+
+//Banner
+  //Logo with competence
+  $logo-width-xs: 90px;
+  $logo-width-sm: 180px;
+  $logo-width-md: 240px;
+  $logo-width-lg: $logo-width-md;
+  $logo-width-xl: $logo-width-lg;
+
+  $logo-height-xs: $logo-width-xs * 310 / 1199;
+  $logo-height-sm: $logo-width-sm * 310 / 1199;
+  $logo-height-md: $logo-width-md * 310 / 1199;
+  $logo-height-lg: $logo-width-lg * 310 / 1199;
+  $logo-height-xl: $logo-width-xl * 310 / 1199;
+
+  $logo-margin-top-xs: - ($logo-width-xs * 160 / 1199);
+  $logo-margin-top-sm: - ($logo-width-sm * 160 / 1199);
+  $logo-margin-top-md: - ($logo-width-md * 160 / 1199);
+  $logo-margin-top-lg: - ($logo-width-lg * 160 / 1199);
+  $logo-margin-top-xl: - ($logo-width-xl * 160 / 1199);
+
+  //Logo alone
+
+  $logo-height-alone-xs: 60px;
+  $logo-height-alone-sm: $logo-height-alone-xs;
+  $logo-height-alone-md: 100px;
+  $logo-height-alone-lg: 165px;
+  $logo-height-alone-xl: 180px;
+
+  $logo-width-alone-xs: $logo-height-alone-xs * 1199 / 310;
+  $logo-width-alone-sm: $logo-height-alone-sm * 1199 / 310;
+  $logo-width-alone-md: $logo-height-alone-md * 1199 / 310;
+  $logo-width-alone-lg: $logo-height-alone-lg * 1199 / 310;
+  $logo-width-alone-xl: $logo-height-alone-xl * 1199 / 310;
+
+  $logo-margin-top-alone-xs: - ($logo-width-alone-xs * 160 / 1199);
+  $logo-margin-top-alone-sm: - ($logo-width-alone-sm * 160 / 1199);
+  $logo-margin-top-alone-md: - ($logo-width-alone-md * 160 / 1199) * 2/ 3;
+  $logo-margin-top-alone-lg: - ($logo-width-alone-lg * 160 / 1199) / 2;
+  $logo-margin-top-alone-xl: - ($logo-width-alone-xl * 160 / 1199) / 2;
+
+  //Padding top bottom
+  $banner-padding-top-xs: 45px;
+  $banner-padding-top-sm: $banner-padding-top-xs;
+  $banner-padding-top-md: 50px;
+  $banner-padding-top-lg: 60px;
+  $banner-padding-top-xl: 70px;
+
+  $banner-padding-bottom-xs: $banner-padding-top-xs;
+  $banner-padding-bottom-sm: $banner-padding-bottom-xs;
+  $banner-padding-bottom-md: $banner-padding-bottom-xs;
+  $banner-padding-bottom-lg: 65px;
+  $banner-padding-bottom-xl: 70px;
+
+  //Competence
+  $banner-competence-max-width-xs: $xs-width - 2 * $menu-padding-left-right-xs - $logo-width-xs - 10px;
+  $banner-competence-max-width-sm: $sm-width - 2 * $menu-padding-left-right-sm - $logo-width-sm - 10px;
+  $banner-competence-max-width-md: $md-width - 2 * $menu-padding-left-right-md - $logo-width-md - 10px;
+  $banner-competence-max-width-lg: $lg-width - 2 * $menu-padding-left-right-lg - $logo-width-lg - 10px;
+  $banner-competence-max-width-xl: $xl-width - 2 * $menu-padding-left-right-xl - $logo-width-xl;
+
+
+  //Competence font-size
+  $font-size-xs: 2em;
+  $font-size-sm: 3em;
+  $font-size-md: 4em;
+  $font-size-lg: 5em;
+  $font-size-xl: 6em;
+
+//Menu competences
+  $menu-competences-item-height: 25px;
+
+
+
+
+

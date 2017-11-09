@@ -1,0 +1,25 @@
+Grid :
+  use sass/bootstrap/_bootstrap-grid.scss
+
+Gutter:
+  removed at sass/bootstrap/_variables.scss line 234
+
+<a>:
+  removed all style in sass/bootstrap/_normalize.scss lines 108, 109, 120, 121 //useless
+  removed all style by changing variables in sass/bootstrap/_variables.scss lines 194 to 197
+
+<h1>:
+  removed margin in sass/bootstrap/_normalize.scss line 51
+  added in sass/bootstrap/_normalize.scss line 52
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+
+<ul>:
+  added -webkit-padding-start: 0; in sass/bootstrap/_reboot.scss line 136
+   and -webkit-margin-after: 0;
+ line 137
+
+
+

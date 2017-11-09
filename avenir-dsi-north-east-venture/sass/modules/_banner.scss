@@ -1,0 +1,187 @@
+.banner {
+  margin-right: $menu-padding-left-right-xs;
+  margin-left: $menu-padding-left-right-xs;
+  // padding-top: $banner-padding-top-xs;
+  // padding-bottom: $banner-padding-bottom-xs;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items: flex-start;
+  // flex-wrap: wrap;
+
+  border: 1px solid #000;
+  border-right: none;
+  border-left: none;
+  overflow: hidden;
+
+
+  @media only screen and (min-width: $sm-width) {
+    margin-right: $menu-padding-left-right-sm;
+    margin-left: $menu-padding-left-right-sm;
+    // padding-top: $banner-padding-top-sm;
+    // padding-bottom: $banner-padding-bottom-sm;
+  }
+  @media only screen and (min-width: $md-width) {
+    margin-right: $menu-padding-left-right-md;
+    margin-left: $menu-padding-left-right-md;
+    // padding-top: $banner-padding-top-md;
+    // padding-bottom: $banner-padding-bottom-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    margin-right: $menu-padding-left-right-lg;
+    margin-left: $menu-padding-left-right-lg;
+    // padding-top: $banner-padding-top-lg;
+    // padding-bottom: $banner-padding-bottom-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    margin-right: $menu-padding-left-right-xl;
+    margin-left: $menu-padding-left-right-xl;
+    // padding-top: $banner-padding-top-xl;
+    // padding-bottom: $banner-padding-bottom-xl;
+  }
+
+}
+
+.banner-image, .banner-text, {
+  display: flex;
+  flex-direction: column;
+  margin-top: $banner-padding-top-xs;
+  margin-bottom: $banner-padding-bottom-xs;
+
+  //justify-content: center;
+  //align-items: center;
+  //align-content: center;
+
+  height: $logo-height-alone-xs;
+  @media only screen and (min-width: $sm-width) {
+    height: $logo-height-alone-sm;
+    margin-top: $banner-padding-top-sm;
+    margin-bottom: $banner-padding-bottom-sm;
+  }
+  @media only screen and (min-width: $md-width) {
+    height: $logo-height-alone-md;
+    margin-top: $banner-padding-top-md;
+    margin-bottom: $banner-padding-bottom-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    height: $logo-height-alone-lg;
+    margin-top: $banner-padding-top-lg;
+    margin-bottom: $banner-padding-bottom-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    height: $logo-height-alone-xl;
+    margin-top: $banner-padding-top-xl;
+    margin-bottom: $banner-padding-bottom-xl;
+  }
+
+
+  // border: 1px solid #000;
+}
+
+.banner-text {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+
+}
+
+.banner-company-img {
+  margin-top: $logo-margin-top-xs;
+  width: $logo-width-xs;
+  height: $logo-height-xs;
+  @media only screen and (min-width: $sm-width) {
+    margin-top: $logo-margin-top-sm;
+    width: $logo-width-sm;
+    height: $logo-height-sm;
+  }
+  @media only screen and (min-width: $md-width) {
+    margin-top: $logo-margin-top-md;
+    width: $logo-width-md;
+    height: $logo-height-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    margin-top: $logo-margin-top-lg;
+    width: $logo-width-lg;
+    height: $logo-height-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    margin-top: $logo-margin-top-xl;
+    width: $logo-width-xl;
+    height: $logo-height-xl;
+  }
+
+  &.alone {
+    margin-top: $logo-margin-top-alone-xs;
+    width: $logo-width-alone-xs;
+    height: $logo-height-alone-xs;
+    @media only screen and (min-width: $sm-width) {
+      margin-top: $logo-margin-top-alone-sm;
+      width: $logo-width-alone-sm;
+      height: $logo-height-alone-sm;
+      margin-bottom: -$logo-margin-top-alone-sm;
+    }
+    @media only screen and (min-width: $md-width) {
+      margin-top: $logo-margin-top-alone-md;
+      width: $logo-width-alone-md;
+      height: $logo-height-alone-md;
+    }
+    @media only screen and (min-width: $lg-width) {
+      margin-top: $logo-margin-top-alone-lg;
+      width: $logo-width-alone-lg;
+      height: $logo-height-alone-lg;
+    }
+    @media only screen and (min-width: $xl-width) {
+      margin-top: $logo-margin-top-alone-xl;
+      width: $logo-width-alone-xl;
+      height: $logo-height-alone-xl;
+      margin-bottom: -$logo-margin-top-alone-xl;
+    }
+  }
+}
+
+.banner-competence-name, {
+  font-weight: 800;
+  line-height: 0.8em;
+  text-align: right;
+  text-transform: uppercase;
+
+
+  font-size: $font-size-xs;
+  // max-width: $banner-competence-max-width-xs;
+  @media only screen and (min-width: $sm-width) {
+    font-size: $font-size-sm;
+    // max-width: $banner-competence-max-width-sm;
+  }
+  @media only screen and (min-width: $md-width) {
+    font-size: $font-size-md;
+    // max-width: $banner-competence-max-width-md;
+  }
+  @media only screen and (min-width: $lg-width) {
+    font-size: $font-size-lg;
+    // max-width: $banner-competence-max-width-lg;
+  }
+  @media only screen and (min-width: $xl-width) {
+    font-size: $font-size-xl;
+    // max-width: $banner-competence-max-width-xl;
+    font-weight: 900;
+  }
+
+  &.without {
+    display: none;
+  }
+
+  // border: 1px solid #000;
+}
+
+.banner-hidden {
+  display: static;
+
+  opacity: 0.5;
+  // border: 1px solid #000;
+}
+
+
+.banner-separation {
+  height: $banner-separation-height;
+}
