@@ -118,6 +118,7 @@ function init (initialPosition) {
 
   /*                 MENU COMPETENCES            */
   itemsContent.forEach(item => {
+    item.nextElementSibling.firstElementChild.firstElementChild.setAttribute('fill', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important")
     if ((itemsContent.indexOf(item) < menuItemsNumber) && (itemsContent.indexOf(item) >= (menuItemsNumber - clickedMenuPos))) {
       item.textContent = competences[clickedMenuPos + itemsContent.indexOf(item) - menuItemsNumber].menuContent;
       item.dataset.menuPosition = competences[clickedMenuPos + itemsContent.indexOf(item) - menuItemsNumber].menuPosition;
@@ -358,6 +359,10 @@ function translateAndFadeBanner () {
       document.querySelectorAll('p').forEach(text => {
         text.style.transition = `color ${transitionInSeconds / 3}s ease-in-out`;
         text.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+        if (!!text.nextElementSibling && text.nextElementSibling.tagName === `svg`) {
+          console.log(text.nextElementSibling.firstElementChild.firstElementChild)
+          text.nextElementSibling.firstElementChild.firstElementChild.setAttribute('fill', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important")
+        }
       })
       //Menu Dépannage
       menuDepannage.style.setProperty('color', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].depannageColor, "important") ;
@@ -428,6 +433,10 @@ function translateAndFadeBanner () {
       document.querySelectorAll('p').forEach(text => {
         text.style.transition = `color ${transitionInSeconds / 3}s ease-in-out`;
         text.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+        if (!!text.nextElementSibling && text.nextElementSibling.tagName === `svg`) {
+          console.log(text.nextElementSibling.firstElementChild.firstElementChild)
+          text.nextElementSibling.firstElementChild.firstElementChild.setAttribute('fill', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important")
+        }
       })
       //Menu Dépannage
       menuDepannage.style.setProperty('color', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].depannageColor, "important") ;
