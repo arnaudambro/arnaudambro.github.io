@@ -86,7 +86,8 @@
       console.log("loading: got an error: ", error)
     })
 
-    competitor.addEventListener('mouseover', cursorPlus)
+
+    competitor.addEventListener('mousemove', changeCursor)
 
     //Incrémentation
     competitor.addEventListener('click', incrementCounter);
