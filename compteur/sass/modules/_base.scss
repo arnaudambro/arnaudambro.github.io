@@ -1,6 +1,8 @@
 
-$bgcolor: #e6e6e6;
+$bgcolor: rgba(230,230,230,1.00);
+$box-shadow-color: rgba(177,216,216,1.00);
 $box-color: #fff;
+$title-color: rgba(255,100,107,1.00);
 
 html, body {
     margin: 0;
@@ -12,45 +14,54 @@ html, body {
 .container {
 	margin: 20px;
 	background-color: $box-color;
-	box-shadow: 1px 1px 3px #b1d8d8;
+	box-shadow: 1px 1px 3px $box-shadow-color;
 	border-radius: 10px;
 
-	&.title {
-		padding: 30px;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
-		font-size: 1.5em;
-		line-height: 2em;
-		text-align: center;
-		color: #FF646B;
-	}
 	&.competitors {
-		background-color: $bgcolor;
 		box-shadow: none;
-		//border: 1px solid #000;
+    background-color: $bgcolor;
 	}
-
 }
 
-.competitor {
+
+.title {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  color: $title-color;
+}
+
+.show-date {
+  padding-bottom: 5px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 0.85em;
+
+  line-height: 2em;
+  text-align: center;
+}
+
+.competitor,  {
 	display: block;
 	margin: 5px;
 	padding: 20px;
 	height: 100%;
-	font-family: 'Roboto', sans-serif;
 
+	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	line-height: 2em;
-	//flex: 1 1 auto;
-	//border: 2px solid #000;
 
 	.counter {
 		padding: 15px 0;
 		font-size: 3em;
 		line-height: 3em;
 		font-weight: bold;
-
-		//border: 5px solid #FF606C;
 	}
 
 	background-color: $box-color;

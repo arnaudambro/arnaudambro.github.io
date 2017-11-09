@@ -46,16 +46,21 @@
   }
 
 
-  function changeCursor(e) {
-
-    if(e.shiftKey) {
-      this.style.cursor = `url(img/counterminus-no-transparent.png) 5 5, auto`;
-    } else {
+  function cursorPlus(e) {
+    this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
+    if (e.shiftKey) {
       this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
     }
-
   }
 
+/*  function cursorMinus(e) {
+    if (e.keycode === 16) {
+      this.style.cursor = `url(img/counterminus-no-transparent.png) 5 5, auto`;
+    } else {
+      return;
+    }
+  }
+*/
 
 //Interaction avec la page web
   competitors.forEach((competitor) => {
@@ -81,7 +86,9 @@
       console.log("loading: got an error: ", error)
     })
 
+
     competitor.addEventListener('mousemove', changeCursor)
+
     //Incrémentation
     competitor.addEventListener('click', incrementCounter);
 
