@@ -81,7 +81,8 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid #000;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
   border-right: none;
   border-left: none;
   overflow: hidden;
@@ -115,7 +116,7 @@ html, body {
   }
 }
 
-/* line 46, ../sass/modules/_banner.scss */
+/* line 47, ../sass/modules/_banner.scss */
 .banner-image, .banner-text {
   display: flex;
   flex-direction: column;
@@ -124,7 +125,7 @@ html, body {
   height: 60px;
 }
 @media only screen and (min-width: 576px) {
-  /* line 46, ../sass/modules/_banner.scss */
+  /* line 47, ../sass/modules/_banner.scss */
   .banner-image, .banner-text {
     height: 60px;
     margin-top: 45px;
@@ -132,7 +133,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 46, ../sass/modules/_banner.scss */
+  /* line 47, ../sass/modules/_banner.scss */
   .banner-image, .banner-text {
     height: 100px;
     margin-top: 50px;
@@ -140,7 +141,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 46, ../sass/modules/_banner.scss */
+  /* line 47, ../sass/modules/_banner.scss */
   .banner-image, .banner-text {
     height: 165px;
     margin-top: 60px;
@@ -148,7 +149,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 46, ../sass/modules/_banner.scss */
+  /* line 47, ../sass/modules/_banner.scss */
   .banner-image, .banner-text {
     height: 180px;
     margin-top: 70px;
@@ -156,21 +157,21 @@ html, body {
   }
 }
 
-/* line 82, ../sass/modules/_banner.scss */
+/* line 83, ../sass/modules/_banner.scss */
 .banner-text {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
 }
 
-/* line 89, ../sass/modules/_banner.scss */
+/* line 90, ../sass/modules/_banner.scss */
 .banner-company-img {
   margin-top: -12.01001px;
   width: 90px;
   height: 23.26939px;
 }
 @media only screen and (min-width: 576px) {
-  /* line 89, ../sass/modules/_banner.scss */
+  /* line 90, ../sass/modules/_banner.scss */
   .banner-company-img {
     margin-top: -24.02002px;
     width: 180px;
@@ -178,7 +179,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 89, ../sass/modules/_banner.scss */
+  /* line 90, ../sass/modules/_banner.scss */
   .banner-company-img {
     margin-top: -32.02669px;
     width: 240px;
@@ -186,7 +187,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 89, ../sass/modules/_banner.scss */
+  /* line 90, ../sass/modules/_banner.scss */
   .banner-company-img {
     margin-top: -32.02669px;
     width: 240px;
@@ -194,21 +195,21 @@ html, body {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 89, ../sass/modules/_banner.scss */
+  /* line 90, ../sass/modules/_banner.scss */
   .banner-company-img {
     margin-top: -32.02669px;
     width: 240px;
     height: 62.05171px;
   }
 }
-/* line 114, ../sass/modules/_banner.scss */
+/* line 115, ../sass/modules/_banner.scss */
 .banner-company-img.alone {
   margin-top: -30.96774px;
   width: 232.06452px;
   height: 60px;
 }
 @media only screen and (min-width: 576px) {
-  /* line 114, ../sass/modules/_banner.scss */
+  /* line 115, ../sass/modules/_banner.scss */
   .banner-company-img.alone {
     margin-top: -30.96774px;
     width: 232.06452px;
@@ -217,7 +218,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 114, ../sass/modules/_banner.scss */
+  /* line 115, ../sass/modules/_banner.scss */
   .banner-company-img.alone {
     margin-top: -34.4086px;
     width: 386.77419px;
@@ -225,7 +226,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 114, ../sass/modules/_banner.scss */
+  /* line 115, ../sass/modules/_banner.scss */
   .banner-company-img.alone {
     margin-top: -42.58065px;
     width: 638.17742px;
@@ -233,7 +234,7 @@ html, body {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 114, ../sass/modules/_banner.scss */
+  /* line 115, ../sass/modules/_banner.scss */
   .banner-company-img.alone {
     margin-top: -46.45161px;
     width: 696.19355px;
@@ -242,7 +243,7 @@ html, body {
   }
 }
 
-/* line 143, ../sass/modules/_banner.scss */
+/* line 144, ../sass/modules/_banner.scss */
 .banner-competence-name {
   font-weight: 800;
   line-height: 0.8em;
@@ -251,42 +252,42 @@ html, body {
   font-size: 2em;
 }
 @media only screen and (min-width: 576px) {
-  /* line 143, ../sass/modules/_banner.scss */
+  /* line 144, ../sass/modules/_banner.scss */
   .banner-competence-name {
     font-size: 3em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 143, ../sass/modules/_banner.scss */
+  /* line 144, ../sass/modules/_banner.scss */
   .banner-competence-name {
     font-size: 4em;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 143, ../sass/modules/_banner.scss */
+  /* line 144, ../sass/modules/_banner.scss */
   .banner-competence-name {
     font-size: 5em;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 143, ../sass/modules/_banner.scss */
+  /* line 144, ../sass/modules/_banner.scss */
   .banner-competence-name {
     font-size: 6em;
     font-weight: 900;
   }
 }
-/* line 170, ../sass/modules/_banner.scss */
+/* line 171, ../sass/modules/_banner.scss */
 .banner-competence-name.without {
   display: none;
 }
 
-/* line 177, ../sass/modules/_banner.scss */
+/* line 178, ../sass/modules/_banner.scss */
 .banner-hidden {
   display: static;
   opacity: 0.5;
 }
 
-/* line 185, ../sass/modules/_banner.scss */
+/* line 186, ../sass/modules/_banner.scss */
 .banner-separation {
   height: 40px;
 }
@@ -371,19 +372,6 @@ a.main-description-button:hover > .svg-arrow {
   opacity: 1;
 }
 
-/* :after {
-  z-index: 1;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: '';
-  margin-right: -$button-arrow-size;
-  background-color: black;
-  height: $button-arrow-size;
-  width: $button-arrow-size;
-  transform: translateX($button-arrow-size);
-} */
 /* line 2, ../sass/modules/_menu-competences.scss */
 .menu-competences {
   list-style: none;

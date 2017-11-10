@@ -1,4 +1,5 @@
 // import transformSVG from './transform-svg';
+'use strict';
 
 /*------------------------------ Variables -----------------------------------*/
 const bannerLogo = document.querySelector('.banner-image');
@@ -81,7 +82,7 @@ const competences = [
   isAlone: true,
   backgroundProperty: `url(img/ged_banner-green.png) center / cover no-repeat`,
   textColor: colorBlack,
-  depannageColor: colorPurpleDSI,
+  depannageColor: colorWhite,
   btnBackgroundColor: colorBlack,
   btnTextColor: colorWhite
 },
@@ -89,7 +90,7 @@ const competences = [
 
 
 
-const menuItemsNumber = 5;
+const menuItemsNumber = competences.length;
 let clickedMenuPos;
 let clicked;
 let clickedItemIndex;
@@ -98,16 +99,15 @@ const transitionInMilliSeconds = transitionInSeconds * 1000;
 let transitionPerUnitInSeconds;
 let transitionPerUnitInMilliSeconds;
 const backgroundTranslationDistance = 15;
+let timer;
 
 let fakeBanner;
 let fakeBannerLogo;
 let fakeBannerCompetenceName;
-
-
-
-
+let timerBanner;
 
 init(0);
+
 
 /*--------------------------- Functions - callbacks --------------------------*/
 
@@ -130,7 +130,9 @@ function init (initialPosition) {
     }
   })
 
+
   /*                 BANNER COMPETENCES            */
+  banner.style.borderColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
   bannerCompetenceName.firstElementChild.textContent = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].bannerContent;
   bannerCompetenceName.firstElementChild.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
 
@@ -171,7 +173,6 @@ function init (initialPosition) {
   buttonMoreInfos.firstElementChild.style.setProperty('color', buttonTextColor, "important");
   buttonMoreInfos.lastElementChild.firstElementChild.firstElementChild.setAttribute('fill', buttonTextColor, "important")
   buttonMoreInfos.style.backgroundColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].btnBackgroundColor;
-
 }
 
 /*------------------ GET THE CLICKED ITEM ----------------------------*/
@@ -192,18 +193,33 @@ function getTheIndexOfTheClickedItem (e) {
     return;
   }
 
-  clickedItemIndex = lis.indexOf(clicked.parentElement.parentElement);
-  clickedMenuPos = competences.filter(competence => competence.menuContent == clicked.textContent.trim())[0].menuPosition;
+  const getClickedMenuPos = competences.filter(competence => competence.menuContent == clicked.textContent.trim())[0].menuPosition;
+
+  //We return the index we want
+  startTransition(e, getClickedMenuPos)
+}
+
+/*------------------ START TRANSITION ----------------------------*/
+function startTransition(e, nextMenuPos) {
+
+  let nextItem = menu.querySelector(`[data-menu-position='${nextMenuPos}']`).parentElement.parentElement;
+  clickedItemIndex = lis.indexOf(nextItem);
   if(clickedItemIndex === 0) {
     return;
   }
+  clickedMenuPos = nextMenuPos;
 
-  //We return the index we want
   transitionPerUnitInSeconds = transitionInSeconds / clickedItemIndex;
   transitionPerUnitInMilliSeconds = transitionInMilliSeconds / clickedItemIndex;
 
   translateAndFadeMenu();
   buildFakeDOM();
+
+  if (e.type === `load`) {
+    window.setTimeout(() => {
+        launchTimer(e)
+      }, transitionInMilliSeconds);
+  }
 }
 
 /*------------------ ROLLING MENU - STEP 1 --------------------------*/
@@ -230,7 +246,7 @@ function translateAndFadeMenu () {
     //We fade-out the items before the one clicked
     window.setTimeout( () => {
       if (links.indexOf(link) < clickedItemIndex) {
-        transitionStyle = 'ease-out';
+        const transitionStyle = 'ease-out';
         link.style.opacity = 0;
         link.style.transition = `opacity ${transitionPerUnitInSeconds}s ${transitionStyle}, transform ${transitionInSeconds}s`;
       }
@@ -240,7 +256,7 @@ function translateAndFadeMenu () {
     window.setTimeout( () => {
       if ((links.indexOf(link) >= menuItemsNumber) && (links.indexOf(link) < (menuItemsNumber + clickedItemIndex))) {
         link.firstElementChild.textContent = links[links.indexOf(link) - menuItemsNumber].firstElementChild.textContent;
-        transitionStyle = 'ease-in';
+        const transitionStyle = 'ease-in';
         link.style.opacity = 1;
         link.style.transition = `opacity ${transitionPerUnitInSeconds}s ${transitionStyle}, transform ${transitionInSeconds}s`;
       }
@@ -293,7 +309,7 @@ function repopulateMenu () {
   }, transitionInMilliSeconds + 100);
 }
 
-/*------------------ ROLLING BANNER --------------------------*/
+/*------------------ ROLLING BANNER & BACKGROUND --------------------*/
 function buildFakeDOM () {
   //Create a fake banner at the dimensions of the existing banner, for transition purpose
   fakeBanner = banner.cloneNode(true);
@@ -360,10 +376,15 @@ function translateAndFadeBanner () {
         text.style.transition = `color ${transitionInSeconds / 3}s ease-in-out`;
         text.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
         if (!!text.nextElementSibling && text.nextElementSibling.tagName === `svg`) {
-          console.log(text.nextElementSibling.firstElementChild.firstElementChild)
           text.nextElementSibling.firstElementChild.firstElementChild.setAttribute('fill', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important")
         }
       })
+      //Banner border
+      fakeBanner.style.transition = `border ${transitionInSeconds/  3}s ease-in-out`;
+      fakeBanner.style.borderColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+      banner.style.transition = `border ${transitionInSeconds/  3}s ease-in-out`;
+      banner.style.borderColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+
       //Menu Dépannage
       menuDepannage.style.setProperty('color', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].depannageColor, "important") ;
       menuDepannage.style.transition = `all ${transitionInSeconds / 3} ease-in-out`;
@@ -400,7 +421,7 @@ function translateAndFadeBanner () {
         fakeBannerLogo.firstElementChild.classList.remove('alone');
         fakeBannerCompetenceName.classList.remove('without');
 
-        //Translate the fake and old logo
+        //Translate the fake and new logo
         fakeBannerLogo.style.opacity = 1;
         fakeBannerLogo.style.transform = `translateY(0)`;
         fakeBannerLogo.style.transition = `all ${transitionInSeconds}s ease-in-out`;
@@ -421,20 +442,19 @@ function translateAndFadeBanner () {
 
       bannerCompetenceName.style.transform = `translateY(-${bannerTranslationDistance}px)`;
       bannerCompetenceName.style.opacity = 0.5;
-      bannerCompetenceName.style.transition = `all ${transitionInSeconds}s ease-in-out`;
+      bannerCompetenceName.style.transition = `transform ${transitionInSeconds}s ease-in-out, opacity ${transitionInSeconds}s ease-in-out`;
     });
 
     // Once the background is in position
     window.setTimeout(() => {
       //Banner
       bannerLogo.style.opacity = 0;
-      bannerLogo.style.transition = `opacity ${transitionInSeconds / 3}s ease-in-out`;
+      bannerLogo.style.transition = `opacity ${transitionInSeconds / 3}s ease-in-out, transform ${transitionInSeconds}s ease-in-out`;
       //All text
       document.querySelectorAll('p').forEach(text => {
         text.style.transition = `color ${transitionInSeconds / 3}s ease-in-out`;
         text.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
         if (!!text.nextElementSibling && text.nextElementSibling.tagName === `svg`) {
-          console.log(text.nextElementSibling.firstElementChild.firstElementChild)
           text.nextElementSibling.firstElementChild.firstElementChild.setAttribute('fill', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important")
         }
       })
@@ -449,9 +469,14 @@ function translateAndFadeBanner () {
       buttonMoreInfos.style.backgroundColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].btnBackgroundColor;
       buttonMoreInfos.style.transition = `all ${transitionInSeconds / 3} ease-in-out`;
 
-      bannerCompetenceName.style.color = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
-      // bannerCompetenceName.style.transition = `opacity ${transitionInSeconds}s ease-in-out, translate  ${transitionInSeconds}s ease-in-out, color ${transitionInSeconds / 3}s ease-in-out`;
-      // fakeBannerCompetenceName.style.transition = `opacity ${transitionInSeconds}s ease-in-out, translate  ${transitionInSeconds}s ease-in-out, color ${transitionInSeconds / 3}s ease-in-out`;
+      //Banner
+      fakeBanner.style.transition = `border ${transitionInSeconds/  3}s ease-in-out`;
+      fakeBanner.style.borderColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+
+      banner.style.transition = `border ${transitionInSeconds/ 3}s ease-in-out`;
+      banner.style.borderColor = competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor;
+      bannerCompetenceName.firstElementChild.style.setProperty('color', competences.filter(competence => competence.menuPosition == clickedMenuPos)[0].textColor, "important") ;
+      bannerCompetenceName.firstElementChild.style.transition = `color ${transitionInSeconds/ 3}s ease-in-out`;
     }, transitionInMilliSeconds / 3)
 
     //Once the transition is done
@@ -516,13 +541,40 @@ function translateAndFadeBackground () {
   }, transitionInMilliSeconds)
 
 }
-/*------------------ ROLLING BACKGROUND --------------------------*/
+/*------------------ TIMER --------------------------*/
 
+function launchTimer(e) {
+
+  timerBanner = banner.cloneNode(false);
+  timerBanner.style.borderTop = `none`;
+  timerBanner.style.borderBottomWidth = `1px`;
+  const timerDuration = 5;
+  timerBanner.style.maxWidth = 0;
+  // window.setTimeout(() => {
+    banner.parentNode.insertBefore(timerBanner, banner.nextElementSibling);
+    timerBanner.classList.add('timerBanner');
+    timerBanner.style.maxWidth = `${banner.getBoundingClientRect().width}px`;
+    timerBanner.style.transition = `max-width ${timerDuration}s linear`;
+  // });
+  timer = window.setTimeout(() => {
+    banner.parentNode.removeChild(timerBanner);
+    console.log(`obligé... bug quelque part ?:${(clickedMenuPos === (menuItemsNumber)) ? 0 : clickedMenuPos++}`);
+    startTransition(e, (clickedMenuPos === (menuItemsNumber)) ? 0 : clickedMenuPos++);
+  }, timerDuration * 1000);
+
+}
 
 /*--------------------------- Event listeners --------------------------------*/
 // menu.addEventListener('click', rollTheMenu, true);
 menu.addEventListener('click', function (e) {
+  if (timerBanner.classList.contains('timerBanner')) {
+  timerBanner.classList.remove('timerBanner');
+  banner.parentNode.removeChild(timerBanner);
+  window.clearTimeout(timer);
+  }
+  // window.removeEventListener('load', launchTimer)
   e.preventDefault();
   getTheIndexOfTheClickedItem(e);
 });
 
+window.addEventListener('load', launchTimer)
