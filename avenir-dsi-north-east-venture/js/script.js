@@ -554,7 +554,7 @@ function launchTimer(e) {
     banner.parentNode.insertBefore(timerBanner, banner.nextElementSibling);
     timerBanner.classList.add('timerBanner');
     timerBanner.style.maxWidth = `${banner.getBoundingClientRect().width}px`;
-    timerBanner.style.transition = `max-width ${timerDuration}s linear`;
+    timerBanner.style.transition = `max-width ${timerDuration}s cubic-bezier(1, 1.02, 0.71, 0.95)`;
   // });
   timer = window.setTimeout(() => {
     banner.parentNode.removeChild(timerBanner);
