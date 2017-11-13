@@ -46,21 +46,16 @@
   }
 
 
-  function cursorPlus(e) {
-    this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
-    if (e.shiftKey) {
-      this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
-    }
-  }
+  function changeCursor(e) {
 
-/*  function cursorMinus(e) {
-    if (e.keycode === 16) {
+    if(e.shiftKey) {
       this.style.cursor = `url(img/counterminus-no-transparent.png) 5 5, auto`;
     } else {
-      return;
+      this.style.cursor = `url(img/counterplus-no-transparent.png) 5 5, auto`;
     }
+
   }
-*/
+
 
 //Interaction avec la page web
   competitors.forEach((competitor) => {
@@ -86,9 +81,13 @@
       console.log("loading: got an error: ", error)
     })
 
+<<<<<<< HEAD
 
     competitor.addEventListener('mousemove', changeCursor)
 
+=======
+    competitor.addEventListener('mouseover', changeCursor)
+>>>>>>> parent of fd123be... added avenir-dsi-north-east-venture
     //Incrémentation
     competitor.addEventListener('click', incrementCounter);
 
